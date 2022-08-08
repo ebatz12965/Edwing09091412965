@@ -17,7 +17,8 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/ClienteController"})
 public class ClienteController extends HttpServlet {
-
+    ClienteModell alumno;
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,6 +33,7 @@ public class ClienteController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            alumno= new ClienteModell();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -39,7 +41,7 @@ public class ClienteController extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Este es mi Servlet " + request.getContextPath() + "</h1>");
-            out.println("<h1>Segundo título</h1>");
+            out.println("<h1>Segundo título " + alumno.getNombre() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
