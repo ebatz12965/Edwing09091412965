@@ -6,14 +6,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>TODO supply a title</title>
-        <meta charset="UTF-8">
+       <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="js/script_2.js"></script>
     </head>
-    <body>
-            <!-- Inicio del Navbar -->
+    
+            <!-- Inicio del Navbar >
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,8 +49,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
-            <!-- Fin del Navbar -->
-        </nav>
+            < Fin del Navbar >
+        <nav -->
    
             <!-- Inicio del Container -->
         <div class="container mt-2">
@@ -57,24 +58,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <h1>Formulario de Registro de Estudiantes</h1>
         <a href="ClienteController"> Click Aquí </a>
         
-         <input type="button" name="" value="Agregar Elementos en Ejecusion" onclick="crearElementosEnEjecusion();"><br>
+        
             <!-- Inicio del Formulario -->
         <form action="ClienteController">
+            <!--div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div-->
             <div class="form-group">
-              <label for="exampleInputCode">Código de alumno</label>
-              <input class="form-control" type="text" placeholder="Ingrese su código" name="codigo">
+              <label for="codigo">Código de alumno</label>
+              <input class="form-control" type="text" placeholder="Ingrese su código" name="codigo" id="codigo">
             </div>
             <div class="form-group">
-              <label for="exampleInputName">Nombre/s del Alumno</label>
-              <input class="form-control" type="text" placeholder="Ingresar su nombre" name="nombre">
+              <label for="nombre">Nombre/s del Alumno</label>
+              <input class="form-control" type="text" placeholder="Ingresar su nombre" name="nombre" id="nombre">
             </div>
             <div class="form-group">
-              <label for="exampleInputName">Apellidos del Alumno</label>
-              <input class="form-control" type="text" placeholder="Ingresar sus apellidos" name="apellido">
+              <label for="apellido">Apellidos del Alumno</label>
+              <input class="form-control" type="text" placeholder="Ingresar sus apellidos" name="apellido" id="apellido">
              </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Correo del Alumno</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correo">
+              <label for="correo">Correo del Alumno</label>
+              <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correo" id="correo">
               <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo electrónico con nadie más.s.</small>
             </div>
             <!-- div class="form-group">
@@ -82,13 +88,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña" name="pass">
             </div -->
             <div class="form-group">
-              <label for="exampleInputAddress">Dirección</label>
-              <input class="form-control" type="text" placeholder="Ingresar su dirección" name="direccion">
+              <label for="direccion">Dirección</label>
+              <input class="form-control" type="text" placeholder="Ingresar su dirección" name="direccion" id="direccion">
             </div>
-            <!--div class="form-group">
-              <label for="exampleInputPhone">Teléfono</label>
-              <input class="form-control" type="text" placeholder="Ingresar su número de teléfono" name="telefono">
-            </div-->
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input class="form-control" type="text" placeholder="Ingresar su número de teléfono" name="telefono" id="telefono">
+            </div>
             <!--div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -99,16 +105,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </select><br>
             <!--button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-danger">Cancelar</button-->
-             
             <div class="form-group has-feedback">
-                 
-                <input type="button" value="Enviar Opcion 1" onclick="enviarFormulario()" class="submit-button btn btn-default">
-                <input type="button" value="Enviar Opcion 2" onclick="enviarFormularioOpcion2()" class="submit-button btn btn-default">
+              <input type="button" value="CAPTURAR" onclick="capturar()" class="submit-button btn btn-default">
             </div>
+            
             <!-- Fin del Formulario -->
         </form>
             <!-- Fin del Container -->
         </div>
-    </body>
+    
 </html>
     
