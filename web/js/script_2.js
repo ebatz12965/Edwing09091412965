@@ -3,17 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-function capturar(){
-    var cod=document.getElementById("codigo").value;
-    var nom=document.getElementById("nombre").value;
-    var ape=document.getElementById("apellido").value;
-    var mail=document.getElementById("correo").value;
-    var dir=document.getElementById("direccion").value;
-    var tel=document.getElementById("telefono").value;
+function capturarDatos(){
+    let cod=document.getElementById("codigo").value;
+    let nom=document.getElementById("nombre").value;
+    let ape=document.getElementById("apellido").value;
+    let mail=document.getElementById("correo").value;
+    let dir=document.getElementById("direccion").value;
+    let tel=document.getElementById("telefono").value;
         if (cod===""){
             alert("Ingresar el Código");
            document.getElementById("codigo").focus();
-        }else {
+        } else {
             if (nom===""){
             alert("Ingresar un Nombre");
            document.getElementById("nombre").focus();
@@ -33,7 +33,19 @@ function capturar(){
             if (tel===""){
             alert("Ingresar un Número de Contacto");
            document.getElementById("telefono").focus();
+        } else {
+            console.log(cod, nom, ape, dir, tel);
+            document.getElementById("codigo").value="";
+            document.getElementById("nombre").value="";
+            document.getElementById("apellido").value="";
+            document.getElementById("correo").value="";
+            document.getElementById("direccion").value="";
+            document.getElementById("telefono").value="";
+            document.getElementById("codigo").focus();
         }}}}}}
-            
-        console.log(cod, nom, ape, dir, tel);
+        
+        
+        
+        
+        
 }

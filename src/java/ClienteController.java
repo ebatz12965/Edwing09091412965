@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/ClienteController"})
 public class ClienteController extends HttpServlet {
-    ClienteModell alumno;
+    ClienteModell alumnos;
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,15 +33,15 @@ public class ClienteController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            alumno= new ClienteModell();
+            alumnos= new ClienteModell();
             /*String pass =  request.getParameter("pass");*/
            /* String opcion =  request.getParameter("opcion");*/
-            alumno.setCodigo(request.getParameter("codigo"));
-            alumno.setNombre(request.getParameter("nombre"));
-            alumno.setApellido(request.getParameter("apellido"));
-            alumno.setCorreo(request.getParameter("correo"));
-            alumno.setDireccion(request.getParameter("direccion"));
-            alumno.setCorreo(request.getParameter("telefono"));
+            alumnos.setCodigo(request.getParameter("codigo"));
+            alumnos.setNombre(request.getParameter("nombre"));
+            alumnos.setApellido(request.getParameter("apellido"));
+            alumnos.setCorreo(request.getParameter("correo"));
+            alumnos.setDireccion(request.getParameter("direccion"));
+            alumnos.setCorreo(request.getParameter("telefono"));
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -50,13 +50,13 @@ public class ClienteController extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Datos del alumno registrado, gracias por registrarse </h1>");
             out.println("<h2>Código del Alumno</h2>");
-            out.println("<h2>" + alumno.getCodigo() + "</h2>");
+            out.println("<h2>" + alumnos.getCodigo() + "</h2>");
             out.println("<h2>Nombre/s del Alumno</h2>");
-            out.println("<h2>" + alumno.getNombre() + "</h2>");
+            out.println("<h2>" + alumnos.getNombre() + "</h2>");
             out.println("<h2>Apellidos del Alumno</h2>");
-            out.println("<h2>" + alumno.getApellido()+ "</h2>");
+            out.println("<h2>" + alumnos.getApellido()+ "</h2>");
             out.println("<h2>Correo</h2>");
-            out.println("<h2>" + alumno.getCorreo() + "</h2>");
+            out.println("<h2>" + alumnos.getCorreo() + "</h2>");
            /* out.println("<h2>Dirección</h2>");
             out.println("<h2>" + alumno.getDireccion() + "</h2>");
             out.println("<h2>Teléfono</h2>");

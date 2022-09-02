@@ -70,14 +70,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               <label for="codigo">Código de alumno</label>
               <input class="form-control" type="text" placeholder="Ingrese su código" name="codigo" id="codigo">
             </div>
-            <div class="form-group">
-              <label for="nombre">Nombre/s del Alumno</label>
-              <input class="form-control" type="text" placeholder="Ingresar su nombre" name="nombre" id="nombre">
+             <div class="form-group">
+            <div class="row">
+            <div class="col">
+              <label for="nombre">Nombre del Alumno</label>  
+              <input type="text" class="form-control" placeholder="Ingresar su nombre" name="nombre" id="nombre">
             </div>
-            <div class="form-group">
-              <label for="apellido">Apellidos del Alumno</label>
-              <input class="form-control" type="text" placeholder="Ingresar sus apellidos" name="apellido" id="apellido">
-             </div>
+            <div class="col">
+              <label for="apellido">Apellido del Alumno</label>  
+              <input type="text" class="form-control" placeholder="Ingresar sus apellidos" name="apellido" id="apellido">
+            </div>
+            </div>
+            </div>
             <div class="form-group">
               <label for="correo">Correo del Alumno</label>
               <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correo" id="correo">
@@ -106,7 +110,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <!--button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-danger">Cancelar</button-->
             <div class="form-group has-feedback">
-              <input type="button" value="CAPTURAR" onclick="capturar()" class="submit-button btn btn-default">
+              <input type="button" value="CAPTURAR" onclick="capturarDatos()" class="submit-button btn btn-default">
             </div>
             
             <!-- Fin del Formulario -->
