@@ -42,10 +42,23 @@ function capturarDatos(){
             document.getElementById("direccion").value="";
             document.getElementById("telefono").value="";
             document.getElementById("codigo").focus();
-        }}}}}}
+        }}}}}}      
         
-        
-        
-        
-        
+}
+
+function enviarFormulario(){
+	let request = new XMLHttpRequest();
+request.open('POST', '/php/email-sender.php', true);
+request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+request.onreadystatechange = function() {
+  if (request.readyState == XMLHttpRequest.DONE) {
+    // Peticion terminada.
+    if (request.status == 200) {
+      // Todo salio bien
+      console.log(request.response);
+    } else {
+      console.log("Error en el envío " + request.response);
+    }
+  }
 }
